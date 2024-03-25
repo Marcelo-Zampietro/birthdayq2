@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flight Back from Williams</title>
+<style>
+    body {
+        background-color: #FFE0E6; /* Light Pink */
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    #container {
+        text-align: center;
+    }
+    #question {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    #answer {
+        padding: 10px;
+        font-size: 16px;
+        width: 300px;
+    }
+    #submitBtn {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #FF69B4; /* Hot Pink */
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div id="container">
+    <img src="C:\Users\Marcelo\Pictures\Saved Pictures\NYC trip with Lea.jpg" alt="Placeholder Image">
+    <div id="question">What day do you fly back from Williams?</div>
+    <input type="text" id="answer" placeholder="Enter day...">
+    <br><br>
+    <button id="submitBtn">Submit</button>
+</div>
+
+<script>
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        var answer = document.getElementById('answer').value;
+        // Open the new page with images passing the answer as a query parameter
+        window.open('newpage.html?day=' + encodeURIComponent(answer), '_blank');
+    });
+</script>
+
+</body>
+</html>
